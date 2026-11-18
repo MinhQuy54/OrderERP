@@ -7,11 +7,22 @@ Hệ thống quản lý đơn hàng theo yêu cầu bài test vị trí Lập tr
 ## 1. Cài đặt & Chạy dự án
 
 ```bash
+# 1. Tạo và kích hoạt môi trường ảo
 python3 -m venv venv
 source venv/bin/activate
+
+# 2. Cài đặt các thư viện phụ thuộc
 pip install -r requirements.txt
+
+# 3. Khởi tạo cấu trúc cơ sở dữ liệu
 python manage.py migrate
+
+# 4. Tạo tài khoản Quản trị viên (Superuser)
+# Tài khoản này dùng để đăng nhập vào giao diện Django Admin
+# (Quản lý danh sách đơn hàng, đổi trạng thái và xem Báo cáo doanh thu)
 python manage.py createsuperuser
+
+# 5. Khởi động server phát triển
 python manage.py runserver
 ```
 
